@@ -1,0 +1,15 @@
+{
+  "name": "Peg",
+  "type": "static",
+  "description": "Peg for the board",
+  "shape": "omni",
+  "radius": 20,
+  "friction": {
+    "collision": 1,
+    "linear": 1,
+    "rotational": 1
+  },
+  "sensors": [],
+  "mass": 1,
+  "controller": "lib/peg.so"
+}
