@@ -8,7 +8,7 @@ A modified version of Plinko was implemented, allowing the user 10 chances to sc
 
 ***Future modifications may include bonus chances given a streak of 100 point scores to further increase the highscore!***
 
-[Game image](docs/gameface.PNG)
+![Game image](docs/gameface.PNG)
 
 
 
