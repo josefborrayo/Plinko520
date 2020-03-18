@@ -57,7 +57,7 @@ class ballController : public Process, public AgentInterface {
             if(score > highscore){
                 highscore = score;
             }
-            if(ball_count == 0){
+            if(ball_count <= 0){
                     score = 0;
                     ball_count=10;
                 }

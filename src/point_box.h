@@ -12,17 +12,21 @@ class point_boxController : public Process, public AgentInterface {
     point_boxController() : Process(), AgentInterface() {}
 
     void init() {
-        
+        update_labels();
     }
 
     void start() {}
 
     void update() {
-        update_labels();
+        //update_labels();
     }
 
     void stop() {}
 
+    /*! 
+        Updates all point box labels with appropiate Score values
+        Provides ability to add labels to invisible point boxes to track stats.
+    */
     void update_labels(){
         int pos = abs(x());
         int labelx = -8;
@@ -50,16 +54,8 @@ class point_boxController : public Process, public AgentInterface {
         }
 
         /*! stats */
-        else if(x()==-349){
-            //label(std::to_string(ball_count), 125, -5);
-            //label(std::to_string((int) id()),0,0);
-        }
         else if(x()==-348){
             label("Current Score:", 35, -22);
-        }
-        else if(x()==-347){
-            //label(std::to_string((int) scorePB), 125, -40);
-            //label(std::to_string((int) id()),0,0);
         }
         else if(x()==-346){
             label("(press 'R' to reset)", -125, -40);
@@ -67,11 +63,6 @@ class point_boxController : public Process, public AgentInterface {
         else if(x()==349){
             label("High Score:", -130, -15);
         }
-        else if(x()==350){
-            //label(std::to_string((int) highscore), -55, -15);
-            //label(std::to_string((int) id()),0,0);
-        }
-        
     }
 };
 
