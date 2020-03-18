@@ -3,7 +3,7 @@
   "type": "static",
   "description": "Peg for the board",
   "shape": "omni",
-  "radius": 20,
+  "radius": 5,
   "friction": {
     "collision": 1,
     "linear": 1,

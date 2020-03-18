@@ -1,0 +1,19 @@
+{
+    "name": "bottom",
+    "type": "static",
+    "description": "Replace this string with a description",
+    "shape": [
+        { "x": -340, "y": 1 },
+        { "x": 340, "y": 1 },
+        { "x": 340, "y": 0 },
+        { "x": -340, "y": 0 }
+    ],
+    "friction": {
+      "collision": 5,
+      "linear": 40,
+      "rotational": 600
+    },
+    "sensors": [],
+    "mass": 1,    
+    "controller": "lib/bottom.so"
+}
