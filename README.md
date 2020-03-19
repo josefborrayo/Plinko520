@@ -36,7 +36,6 @@ Run one of the following suitable for your platform:
 ```
 > docker run -p80:80 -p8765:8765 -v /c/Users/username/clonelocation:/source -it klavins/enviro:v1.6 bash
 ```
-***Note: For Linux users please refer to enviro documentation***
 
 After initializing your docker instance run the following two commands
 ```
