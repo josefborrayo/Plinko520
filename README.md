@@ -25,7 +25,7 @@ Using a command line, navigate to a suitable location to contain this program an
 
 This project utilizes version 1.6 of enviro, more info here: https://github.com/klavinslab/enviro
 
-Run one of the following suitable for you:
+Run one of the following suitable for your platform:
 
 **MAC**
 ```
@@ -36,7 +36,7 @@ Run one of the following suitable for you:
 ```
 > docker run -p80:80 -p8765:8765 -v /c/Users/username/clonelocation:/source -it klavins/enviro:v1.6 bash
 ```
-
+***Note: For Linux users please refer to enviro documentation***
 
 After initializing your docker instance run the following two commands
 ```

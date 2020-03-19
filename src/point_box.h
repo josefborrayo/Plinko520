@@ -17,9 +17,7 @@ class point_boxController : public Process, public AgentInterface {
 
     void start() {}
 
-    void update() {
-        //update_labels();
-    }
+    void update() {}
 
     void stop() {}
 

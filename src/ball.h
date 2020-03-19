@@ -12,6 +12,8 @@ class ballController : public Process, public AgentInterface {
     ballController() : Process(), AgentInterface(), ball_count(10) {}
 
     void init() {
+
+        /*! teleport ball and reduce ball count */
         watch("screen_click", [&](Event &e) {
             if( (e.value()["x"]<350 && e.value()["x"]>-350) && (e.value()["y"]>-400 && e.value()["y"]<-200)){
                 teleport(e.value()["x"], e.value()["y"],0);
@@ -20,6 +22,7 @@ class ballController : public Process, public AgentInterface {
             clear_label();
         });
         
+        /*! Physical reset of ball state and current score(not highscore)*/
         watch("keydown",[&](Event &k){
             auto r = k.value()["key"].get<std::string>();
             if(r == "r"){
@@ -29,6 +32,7 @@ class ballController : public Process, public AgentInterface {
             }
         });
 
+        /*! Score tracking and ballcount reset.*/
         notice_collisions_with("bottom", [&](Event &b){
             double pos = abs(x());
             if(pos<20){
@@ -65,6 +69,8 @@ class ballController : public Process, public AgentInterface {
         
     }
     void start() {}
+
+    /*! move ball and apply label updates*/
     void update() {
         omni_apply_force(0.0,500.0);
         Agent& bcount_stat = find_agent(18);

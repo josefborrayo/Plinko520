@@ -13,7 +13,7 @@ class CoordinatorController : public Process, public AgentInterface {
     void init() {
         spawn_pegs();
     }
-    /*! spawns pegs*/
+    /*! spawns pegs to create the board */
     void spawn_pegs(){
         int start_x = -288;
         int start_y = -200;
