@@ -59,6 +59,6 @@ Resetting the game only resets your current score and ball count, highscores sta
 The main challenges of this project were spawning pegs and adding data labels. To overcome the first issue i utilized Dr. Klavin's spawner example to create a coordinator agent that runs in the background, I was initially trying to spawn these pegs while in the peg agent as to avoid creating 120+ static peg agents in the config.json file. For data labels I decided to modify the specific stats that i wanted to update, within ball.h, so I could track scores and update them in one fell swoop as opposed to emitting events from ball and watching for them in point_box.
 
 ### Aknowledgements
-Special thanks to Dr. Klavins for providing example code to help support the developement of this project and thanks to John V. for assisting in 
+Special thanks to Dr. Klavins for providing example code as well as the eviro platform to help support the developement of this project and thanks to John V. for assisting in debugging issues (my reset keypress was crashing enviro :D).
 
 
