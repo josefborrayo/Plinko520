@@ -6,6 +6,7 @@
 using namespace enviro;
 using namespace std;
 
+//! See defs/ball.json and config.json for usage
 class ballController : public Process, public AgentInterface {
 
     public:
@@ -68,6 +69,7 @@ class ballController : public Process, public AgentInterface {
         });      
         
     }
+    //! Nothing to do to start
     void start() {}
 
     /*! move ball and apply label updates*/
@@ -80,6 +82,8 @@ class ballController : public Process, public AgentInterface {
         Agent& hs_stat = find_agent(23);
         hs_stat.label(std::to_string((int) highscore), -55, -15);
     }
+
+    //! Nothing to do to stop
     void stop() {}
 
     double score, highscore;
@@ -87,6 +91,7 @@ class ballController : public Process, public AgentInterface {
     
 };
 
+//! See defs/ball.json and config.json for usage
 class ball : public Agent {
     public:
     ball(json spec, World& world) : Agent(spec, world) {

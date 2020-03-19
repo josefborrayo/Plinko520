@@ -5,11 +5,13 @@
 
 using namespace enviro;
 
+//! background coordinator, uses src/peg
 class CoordinatorController : public Process, public AgentInterface {
 
     public:
     CoordinatorController() : Process(), AgentInterface() {}
 
+    //! initializes the peg board
     void init() {
         spawn_pegs();
     }
@@ -28,8 +30,14 @@ class CoordinatorController : public Process, public AgentInterface {
             }
         }
     }
+
+    //! nothing to do to start
     void start() {}
+
+    //! nothing to do to update
     void update() {}
+
+    //!nothing to do to stop
     void stop() {}
 
     int separation, shift;
@@ -40,6 +48,7 @@ class CoordinatorController : public Process, public AgentInterface {
                 };
 };
 
+//! background coordinator, uses src/peg
 class Coordinator : public Agent {
     public:
     Coordinator(json spec, World& world) : Agent(spec, world) {

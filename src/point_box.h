@@ -6,19 +6,21 @@
 using namespace enviro;
 using namespace std;
 
+//! See src/point_box.json and config.json for usage
 class point_boxController : public Process, public AgentInterface {
 
     public:
     point_boxController() : Process(), AgentInterface() {}
 
+    //! Updates labels for point boxes and stats
     void init() {
         update_labels();
     }
-
+    //! Nothing to do to start
     void start() {}
-
+    //! Nothing to do to update
     void update() {}
-
+    //! Nothing to do to stop
     void stop() {}
 
     /*! 
@@ -64,6 +66,7 @@ class point_boxController : public Process, public AgentInterface {
     }
 };
 
+//! See src/point_box.json and config.json for usage
 class point_box : public Agent {
     public:
     point_box(json spec, World& world) : Agent(spec, world) {
